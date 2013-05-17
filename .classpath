@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="build/lib/ant-contrib.jar"/>
+	<classpathentry kind="lib" path="build/lib/asm.jar"/>
+	<classpathentry kind="lib" path="build/lib/checkstyle.jar"/>
+	<classpathentry kind="lib" path="build/lib/i4jruntime.jar"/>
+	<classpathentry kind="lib" path="build/lib/jarbundler-2.2.0.jar"/>
+	<classpathentry kind="lib" path="build/lib/junit.jar"/>
+	<classpathentry kind="lib" path="build/lib/pack200task.jar"/>
+	<classpathentry kind="lib" path="build/lib/pmd.jar"/>
+	<classpathentry kind="lib" path="build/lib/prompt.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/activation.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/asterisk-im-client.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/cobra.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/dom4j.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/fmj.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/jdom.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/jna.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/js.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/JTattoo.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/lobo-pub.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/lobo.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/log4j.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/lti-civil.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/platform.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/smack.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/smackx-debug.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/smackx.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/substance.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/swingx-all-1.6.3.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/systeminfo.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/trident.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/xpp.jar"/>
+	<classpathentry kind="lib" path="build/lib/dist/xstream.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

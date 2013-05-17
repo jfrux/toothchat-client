@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.java.j2seproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+            <name>ToothChat Client</name>
+            <source-roots>
+                <root id="src.dir"/>
+                <root id="java.dir"/>
+                <root id="java2.dir"/>
+                <root id="java3.dir"/>
+                <root id="java4.dir"/>
+                <root id="java5.dir"/>
+                <root id="java6.dir"/>
+                <root id="java7.dir"/>
+                <root id="src2.dir"/>
+                <root id="java8.dir"/>
+                <root id="java9.dir"/>
+                <root id="src3.dir"/>
+                <root id="java10.dir"/>
+                <root id="java11.dir"/>
+                <root id="java12.dir"/>
+                <root id="src4.dir"/>
+                <root id="java13.dir"/>
+                <root id="java14.dir"/>
+            </source-roots>
+            <test-roots>
+                <root id="test.src.dir"/>
+                <root id="test.test.dir"/>
+            </test-roots>
+        </data>
+    </configuration>
+</project>

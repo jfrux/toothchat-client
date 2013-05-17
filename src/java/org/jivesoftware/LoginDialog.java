@@ -76,8 +76,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JPopupMenu;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
+import com.swodev.ui.forms.PlaceholderTextField;
 import javax.swing.text.JTextComponent;
-
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -301,14 +301,11 @@ public class LoginDialog {
      * Define Login Panel implementation.
      */
     private final class LoginPanel extends JPanel implements KeyListener, ActionListener, FocusListener, CallbackHandler {
-		private static final long serialVersionUID = 2445523786538863459L;
-		private final JLabel usernameLabel = new JLabel();
-        private final JTextField usernameField = new JTextField();
+        private static final long serialVersionUID = 2445523786538863459L;
+        private final JTextField usernameField = new PlaceholderTextField("Username");
 
-        private final JLabel passwordLabel = new JLabel();
         private final JPasswordField passwordField = new JPasswordField();
 
-        private final JLabel serverLabel = new JLabel();
         private final JTextField serverField = new JTextField();
 
         private final JCheckBox savePasswordBox = new JCheckBox();
@@ -343,7 +340,6 @@ public class LoginDialog {
             //setBorder(BorderFactory.createTitledBorder("Sign In Now"));
             ResourceUtils.resButton(savePasswordBox, Res.getString("checkbox.save.password"));
             ResourceUtils.resButton(autoLoginBox, Res.getString("checkbox.auto.login"));
-            ResourceUtils.resLabel(serverLabel, serverField, Res.getString("label.server"));
             ResourceUtils.resButton(createAccountButton, Res.getString("label.accounts"));
             ResourceUtils.resButton(passwordResetButton, Res.getString("label.passwordreset"));
 
@@ -371,17 +367,14 @@ public class LoginDialog {
             otherUsers.setFocusable(false);
 
 
-            add(usernameLabel,
-                    new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-                            GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 0, 5), 0, 0));
             add(usernameField,
-                    new GridBagConstraints(1, 0, 2, 1,
+                    new GridBagConstraints(2, 0, 2, 1,
                             1.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
                             new Insets(5, 5, 0, 0), 0, 0));
 
-            add(otherUsers, new GridBagConstraints(3, 0, 1, 1,
-                            0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
-                            new Insets(5, 0, 0, 0), 0, 0));
+//            add(otherUsers, new GridBagConstraints(3, 0, 1, 1,
+//                            0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
+//                            new Insets(5, 0, 0, 0), 0, 0));
 
             add(accountLabel,
                     new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
@@ -390,22 +383,14 @@ public class LoginDialog {
                     new GridBagConstraints(1, 1, 1, 1,
                             1.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
                             new Insets(5, 5, 0, 5), 0, 0));
-
-            add(passwordLabel,
-                    new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
-                            GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 0, 5), 5, 0));
             add(passwordField,
-                    new GridBagConstraints(1, 1, 2, 1,
+                    new GridBagConstraints(2, 1, 2, 1,
                             1.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
                             new Insets(5, 5, 0, 0), 0, 0));
 
 
-            // Add Server Field Properties
-            add(serverLabel,
-                    new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
-                            GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(5, 5, 0, 5), 5, 0));
             add(serverField,
-                    new GridBagConstraints(1, 2, 2, 1,
+                    new GridBagConstraints(2, 2, 2, 1,
                             1.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
                             new Insets(5, 5, 0, 0), 0, 0));
 
@@ -507,8 +492,6 @@ public class LoginDialog {
             progressBar.setHorizontalAlignment(JLabel.CENTER);
 
             // Set Resources
-            ResourceUtils.resLabel(usernameLabel, usernameField, Res.getString("label.username"));
-            ResourceUtils.resLabel(passwordLabel, passwordField, Res.getString("label.password"));
             ResourceUtils.resButton(quitButton, Res.getString("button.quit"));
             ResourceUtils.resButton(loginButton, Res.getString("button.login"));
             ResourceUtils.resButton(advancedButton, Res.getString("button.advanced"));
@@ -868,10 +851,7 @@ public class LoginDialog {
 
         public void useSSO(boolean use) {
             if (use) {
-                usernameLabel.setVisible(true);
                 usernameField.setVisible(true);
-
-                passwordLabel.setVisible(false);
                 passwordField.setVisible(false);
 
                 savePasswordBox.setVisible(false);
@@ -882,8 +862,7 @@ public class LoginDialog {
                 serverField.setVisible(true);
 
                 autoLoginBox.setVisible(true);
-                serverLabel.setVisible(true);
-
+                
                 headerLabel.setVisible(true);
 
                 if(localPref.getDebug()) {
@@ -961,9 +940,6 @@ public class LoginDialog {
                 usernameField.setVisible(true);
                 passwordField.setVisible(true);
                 savePasswordBox.setVisible(true);
-                usernameLabel.setVisible(true);
-                passwordLabel.setVisible(true);
-                serverLabel.setVisible(true);
                 serverField.setVisible(true);
 
                 headerLabel.setVisible(false);
